@@ -1,11 +1,11 @@
-function App() {
-  const get = async() => {
-    const resp = await fetch('http://localhost:8000');
-    console.log(resp);
-  };
+import { BrowserRouter } from "react-router-dom"
+import { AppRouter } from "./router/AppRouter"
 
-  get();
-  return <div>welcome to frontend</div>;
+export const App = () => {
+  return (
+    <BrowserRouter>
+        <AppRouter />
+    </BrowserRouter>
+  )
 }
 
-export default App;
